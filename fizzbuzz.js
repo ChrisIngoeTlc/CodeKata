@@ -1,19 +1,45 @@
 "use strict"
 
-exports.GetFizzBuzz = function GetFizzBuzz(number){
+exports.GetFizzBuzz = GetFizzBuzz;
 
-    if (number % 3 == 0 && number % 5 == 0){
+function GetFizzBuzz(number){
+
+    //Have to check fizzbuzz combination first
+    if (IsFizz(number) && IsBuzz(number)){
         return 'fizzbuzz';
     }
 
-    if (number % 3 == 0 ){
+    //Check if number is fizz
+    if (IsFizz(number)){
         return 'fizz';
     }
 
-    if (number % 5 == 0 ){
+    //Check if number is buzz
+    if (IsBuzz(number)){
         return 'buzz';
     }
 
+    //Just return the number
     return number;
 
+}
+
+exports.RunFizzBuzzRange = function RunFizzBuzzRange(startNum, endNum){
+    for(var i = startNum; i <= endNum; i++){
+        console.log(GetFizzBuzz(i));
+    }
+}
+
+//Is the number divisible by 3 = fizz
+function IsFizz(number){
+    if (number % 3 == 0 ){
+        return true;
+    }
+}
+
+//Is the number divisible by 5 = buzz
+function IsBuzz(number){
+    if (number % 5 == 0 ){
+        return true;
+    }
 }
