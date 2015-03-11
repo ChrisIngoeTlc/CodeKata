@@ -13,4 +13,10 @@ fizzbuzz.RunFizzBuzzRange(1,100);
 
 //Callbacks
 var testCallBacks = require('./callbacks');
-testCallBacks.Run();
+testCallBacks.AddTwoNumbers(1,2,displayResult);
+
+function displayResult(err, result){
+    console.info(result);
+}
+
+testCallBacks.AddTwoNumbersTheHardWay(3,2,displayResult);
