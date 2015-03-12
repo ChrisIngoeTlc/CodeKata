@@ -20,3 +20,5 @@ function displayResult(err, result){
 }
 
 testCallBacks.AddTwoNumbersTheHardWay(3,2,displayResult);
+
+testCallBacks.AddTwoNumbersTheHardWay2(4,2,displayResult);
